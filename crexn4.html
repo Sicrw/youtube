@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การฝึกหายใจ - Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f0f9f0;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 100, 0, 0.15);
+            border-color: #4ade80;
+        }
+        
+        .video-modal {
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-10 gradient-bg rounded-xl p-6 text-white">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://img2.imgbiz.com/imgbiz/you.png" alt="YouTube Logo" class="h-16 mr-4">
+                <h1 class="text-3xl md:text-4xl font-bold">การฝึกหายใจ</h1>
+            </div>
+            <p class="text-lg md:text-xl font-light max-w-md text-center md:text-right">
+                วิดีโอแนะนำเทคนิคการฝึกหายใจเพื่อสุขภาพปอดที่ดี
+            </p>
+        </header>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video Card 1 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/vJqn4h56ccQ/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('vJqn4h56ccQ', 'การฝึกหายใจเพื่อเพิ่มประสิทธิภาพการทำงานของปอด')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การฝึกหายใจเพื่อเพิ่มประสิทธิภาพปอด</h2>
+                    <p class="text-gray-600 mb-4">เทคนิคการหายใจที่ช่วยเพิ่มประสิทธิภาพการทำงานของปอด</p>
+                    <button onclick="openVideoModal('vJqn4h56ccQ', 'การฝึกหายใจเพื่อเพิ่มประสิทธิภาพการทำงานของปอด')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/_43zTRVWXdA/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('_43zTRVWXdA', 'การฝึกหายใจเพื่อลดอาการเหนื่อย และช่วยการขยายปอด')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การฝึกหายใจเพื่อลดอาการเหนื่อย</h2>
+                    <p class="text-gray-600 mb-4">เทคนิคการหายใจที่ช่วยลดอาการเหนื่อย และช่วยการขยายปอด</p>
+                    <button onclick="openVideoModal('_43zTRVWXdA', 'การฝึกหายใจเพื่อลดอาการเหนื่อย และช่วยการขยายปอด')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/TEVRzx1PcJI/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('TEVRzx1PcJI', 'การฝึกหายใจ')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การฝึกหายใจพื้นฐาน</h2>
+                    <p class="text-gray-600 mb-4">เทคนิคการฝึกหายใจพื้นฐานสำหรับทุกคน</p>
+                    <button onclick="openVideoModal('TEVRzx1PcJI', 'การฝึกหายใจ')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Breathing Tips Card -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-green-50">
+                    <div class="absolute inset-0 flex items-center justify-center p-6">
+                        <div class="w-full h-full flex flex-col justify-center">
+                            <h3 class="text-xl font-bold text-green-700 mb-4">ประโยชน์ของการฝึกหายใจ</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ช่วยเพิ่มปริมาณออกซิเจนในร่างกาย
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ลดความเครียดและความวิตกกังวล
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ช่วยให้นอนหลับได้ดีขึ้น
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    เพิ่มความจุปอดและประสิทธิภาพการหายใจ
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ช่วยในการฟื้นฟูสมรรถภาพปอด
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">เคล็ดลับการฝึกหายใจ</h2>
+                    <p class="text-gray-600 mb-4">ควรฝึกอย่างสม่ำเสมอ วันละ 5-10 นาที เพื่อผลลัพธ์ที่ดี</p>
+                    <a href="#" class="block w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 text-center">
+                        เรียนรู้เพิ่มเติม
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div class="mt-12 bg-white rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold text-green-700 mb-4">คำแนะนำในการฝึกหายใจ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">ความสม่ำเสมอ</h3>
+                    </div>
+                    <p class="text-gray-600">ฝึกหายใจเป็นประจำทุกวัน อย่างน้อยวันละ 5-10 นาที เพื่อให้เกิดผลลัพธ์ที่ดี</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">สังเกตตัวเอง</h3>
+                    </div>
+                    <p class="text-gray-600">สังเกตการเปลี่ยนแปลงของร่างกาย และปรับเทคนิคให้เหมาะสมกับตัวเอง</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">ความปลอดภัย</h3>
+                    </div>
+                    <p class="text-gray-600">หากรู้สึกเวียนศีรษะหรือไม่สบาย ให้หยุดฝึกและปรึกษาแพทย์</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <p>© 2023 การฝึกหายใจเพื่อสุขภาพ - รวบรวมวิดีโอที่เป็นประโยชน์สำหรับทุกคน</p>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-4xl mx-4 overflow-hidden video-modal">
+            <div class="p-4 bg-green-600 text-white flex justify-between items-center">
+                <h3 id="videoTitle" class="text-xl font-medium truncate"></h3>
+                <button onclick="closeVideoModal()" class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="relative pb-[56.25%] h-0">
+                <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-4 bg-gray-50">
+                <button onclick="closeVideoModal()" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                    ปิด
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(videoId, title) {
+            document.getElementById('videoTitle').textContent = title;
+            document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${videoId}`;
+            document.getElementById('videoModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'944b22db52679102',t:'MTc0ODA3MjMzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

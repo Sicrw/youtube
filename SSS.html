@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>แบบฟอร์มความประทับใจบอร์ด OPD</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; max-width: 700px; margin: auto; }
+    input[type="number"], input[type="date"] { width: 100%; padding: 8px; margin: 5px 0; }
+    label { font-weight: bold; }
+    button { margin-top: 20px; padding: 10px 20px; background: green; color: white; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h2>แบบฟอร์มความประทับใจบอร์ด OPD</h2>
+  <form id="opdForm">
+    <label>วันที่:</label>
+    <input type="date" name="date" required>
+
+    <label>วารีรัตน์:</label>
+    <input type="number" name="วารีรัตน์" min="0">
+
+    <label>เดือนใจ:</label>
+    <input type="number" name="เดือนใจ" min="0">
+
+    <label>สุพัตรา:</label>
+    <input type="number" name="สุพัตรา" min="0">
+
+    <label>ฐิติมา:</label>
+    <input type="number" name="ฐิติมา" min="0">
+
+    <label>อุมาพร:</label>
+    <input type="number" name="อุมาพร" min="0">
+
+    <label>เอกธนัช:</label>
+    <input type="number" name="เอกธนัช" min="0">
+
+    <label>จิรพงศ์:</label>
+    <input type="number" name="จิรพงศ์" min="0">
+
+    <label>นิสา:</label>
+    <input type="number" name="นิสา" min="0">
+
+    <label>อัจฉรา:</label>
+    <input type="number" name="อัจฉรา" min="0">
+
+    <label>ไพโรจน์:</label>
+    <input type="number" name="ไพโรจน์" min="0">
+
+    <label>อรรถพล:</label>
+    <input type="number" name="อรรถพล" min="0">
+
+    <label>มณฑา:</label>
+    <input type="number" name="มณฑา" min="0">
+
+    <button type="submit">ส่งข้อมูล</button>
+  </form>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/PASTE-YOUR-SCRIPT-ID-HERE/exec';
+    const form = document.getElementById('opdForm');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+      .then(response => alert('บันทึกข้อมูลเรียบร้อย'))
+      .catch(error => alert('เกิดข้อผิดพลาด กรุณาลองใหม่'));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เทคนิคการไอ และการขับเสมหะ - Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f0f9f0;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 100, 0, 0.15);
+            border-color: #4ade80;
+        }
+        
+        .video-modal {
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-10 gradient-bg rounded-xl p-6 text-white">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://img2.imgbiz.com/imgbiz/you.png" alt="YouTube Logo" class="h-16 mr-4">
+                <h1 class="text-3xl md:text-4xl font-bold">เทคนิคการไอ และการขับเสมหะ</h1>
+            </div>
+            <p class="text-lg md:text-xl font-light max-w-md text-center md:text-right">
+                วิดีโอแนะนำเทคนิคการไอและการขับเสมหะอย่างมีประสิทธิภาพ
+            </p>
+        </header>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video Card 1 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/z2M4QLK74ko/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('z2M4QLK74ko', 'เทคนิคการไออย่างมีประสิทธิภาพ')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">เทคนิคการไออย่างมีประสิทธิภาพ</h2>
+                    <p class="text-gray-600 mb-4">วิธีการไอที่ถูกต้องเพื่อช่วยขับเสมหะออกจากทางเดินหายใจ</p>
+                    <button onclick="openVideoModal('z2M4QLK74ko', 'เทคนิคการไออย่างมีประสิทธิภาพ')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/P2rcHcHOKGE/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('P2rcHcHOKGE', 'เทคนิคการขับเสมหะด้วยวิธี Huffing')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">เทคนิคการขับเสมหะด้วยวิธี Huffing</h2>
+                    <p class="text-gray-600 mb-4">เทคนิคพิเศษในการขับเสมหะโดยไม่ต้องไอแรงๆ</p>
+                    <button onclick="openVideoModal('P2rcHcHOKGE', 'เทคนิคการขับเสมหะด้วยวิธี Huffing')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/sRhTTVtTLec/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('sRhTTVtTLec', 'เทคนิคการระบายเสมหะร่วมกับการหายใจ (ACBT)')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">เทคนิคการระบายเสมหะร่วมกับการหายใจ (ACBT)</h2>
+                    <p class="text-gray-600 mb-4">เทคนิคการหายใจแบบ ACBT เพื่อช่วยในการขับเสมหะ</p>
+                    <button onclick="openVideoModal('sRhTTVtTLec', 'เทคนิคการระบายเสมหะร่วมกับการหายใจ (ACBT)')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Info Card -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-green-50">
+                    <div class="absolute inset-0 flex items-center justify-center p-6">
+                        <div class="w-full h-full flex flex-col justify-center">
+                            <h3 class="text-xl font-bold text-green-700 mb-4">ทำไมต้องขับเสมหะ?</h3>
+                            <ul class="space-y-2 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ป้องกันการติดเชื้อในระบบทางเดินหายใจ
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ช่วยให้หายใจได้สะดวกขึ้น
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ลดอาการไอรบกวน
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    เพิ่มประสิทธิภาพการทำงานของปอด
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    ช่วยในการฟื้นฟูสมรรถภาพปอด
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">ประโยชน์ของการขับเสมหะ</h2>
+                    <p class="text-gray-600 mb-4">การขับเสมหะอย่างมีประสิทธิภาพช่วยให้ระบบทางเดินหายใจทำงานได้ดีขึ้น</p>
+                    <a href="#tips" class="block w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 text-center">
+                        คำแนะนำเพิ่มเติม
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info Section -->
+        <div id="tips" class="mt-12 bg-white rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold text-green-700 mb-4">คำแนะนำในการขับเสมหะ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">ก่อนการขับเสมหะ</h3>
+                    </div>
+                    <p class="text-gray-600">ดื่มน้ำอุ่นให้เพียงพอ เพื่อช่วยให้เสมหะเหลวและขับออกได้ง่ายขึ้น</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">ข้อควรระวัง</h3>
+                    </div>
+                    <p class="text-gray-600">หากมีอาการเจ็บหน้าอก หรือไอเป็นเลือด ควรหยุดและปรึกษาแพทย์ทันที</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <div class="flex items-center mb-3">
+                        <svg class="h-8 w-8 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold text-gray-800">ความสม่ำเสมอ</h3>
+                    </div>
+                    <p class="text-gray-600">ทำเทคนิคการขับเสมหะอย่างสม่ำเสมอ โดยเฉพาะในช่วงเช้าหลังตื่นนอน</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step by Step Guide -->
+        <div class="mt-12 bg-white rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-bold text-green-700 mb-6">ขั้นตอนการขับเสมหะด้วยวิธี Huffing</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                <span class="text-xl font-bold">1</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">นั่งในท่าที่สบาย</h3>
+                            <p class="mt-2 text-gray-600">นั่งตัวตรง วางมือบนหน้าท้อง ผ่อนคลายไหล่และคอ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                <span class="text-xl font-bold">2</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">หายใจเข้าลึกๆ</h3>
+                            <p class="mt-2 text-gray-600">หายใจเข้าทางจมูกช้าๆ และลึกๆ ให้ลมเข้าไปในปอดมากที่สุด</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                <span class="text-xl font-bold">3</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">หายใจออกแบบ Huffing</h3>
+                            <p class="mt-2 text-gray-600">เปิดปากเล็กน้อย แล้วหายใจออกแรงๆ เหมือนการเป่าไอร้อนบนกระจก</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
+                                <span class="text-xl font-bold">4</span>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-medium text-gray-900">ทำซ้ำ 2-3 ครั้ง</h3>
+                            <p class="mt-2 text-gray-600">พักสักครู่ แล้วทำซ้ำ 2-3 ครั้ง จนรู้สึกว่าเสมหะเคลื่อนตัวขึ้นมา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <p>© 2023 เทคนิคการไอและการขับเสมหะ - รวบรวมวิดีโอที่เป็นประโยชน์สำหรับทุกคน</p>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-4xl mx-4 overflow-hidden video-modal">
+            <div class="p-4 bg-green-600 text-white flex justify-between items-center">
+                <h3 id="videoTitle" class="text-xl font-medium truncate"></h3>
+                <button onclick="closeVideoModal()" class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="relative pb-[56.25%] h-0">
+                <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-4 bg-gray-50">
+                <button onclick="closeVideoModal()" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                    ปิด
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(videoId, title) {
+            document.getElementById('videoTitle').textContent = title;
+            document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${videoId}`;
+            document.getElementById('videoModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'944b2badd02a9102',t:'MTc0ODA3MjY5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

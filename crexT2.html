@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การออกกำลังกาย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f8faf8;
+        }
+        .video-card {
+            transition: all 0.3s ease;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 128, 0, 0.1), 0 10px 10px -5px rgba(0, 128, 0, 0.04);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            transition: all 0.3s ease;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: modalopen 0.4s;
+        }
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            transition: 0.3s;
+            z-index: 10;
+        }
+        .close:hover,
+        .close:focus {
+            color: #166534;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(22, 101, 52, 0.8);
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .video-thumbnail:hover .play-button {
+            background-color: rgba(22, 101, 52, 1);
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .video-thumbnail {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-thumbnail img {
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .video-thumbnail:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header Section -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-12 bg-white rounded-xl shadow-sm p-6">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://img2.imgbiz.com/imgbiz/you.png" alt="YouTube Logo" class="h-12 mr-4">
+                <h1 class="text-3xl font-semibold text-green-800">การออกกำลังกาย</h1>
+            </div>
+            <div class="flex items-center bg-green-100 rounded-full px-5 py-2">
+                <i data-feather="activity" class="text-green-600 mr-2"></i>
+                <span class="text-green-800 font-medium">วิดีโอแนะนำการออกกำลังกาย</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Video Card 1 -->
+            <div class="video-card bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-medium text-green-800 mb-4">การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน</h2>
+                    <div class="video-thumbnail" onclick="openModal('Lzl49C5AEZ0')">
+                        <img src="https://img2.imgbiz.com/imgbiz/00174802eef8e1773e7.jpg" alt="การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน" class="rounded-lg">
+                        <div class="play-button">
+                            <i data-feather="play" class="h-8 w-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4">เรียนรู้วิธีการออกกำลังกายที่เหมาะสมสำหรับผู้ป่วยที่อยู่ในระยะพักฟื้น ทั้งในโรงพยาบาลและที่บ้าน</p>
+                </div>
+                <div class="bg-green-50 px-6 py-3 flex justify-between items-center">
+                    <span class="text-green-700 font-medium">ระยะเวลา: 10:15 นาที</span>
+                    <button onclick="openModal('Lzl49C5AEZ0')" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full inline-flex items-center transition-all">
+                        <i data-feather="play" class="h-4 w-4 mr-2"></i>
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-medium text-green-800 mb-4">การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นที่ช่วยเหลือตัวเองได้น้อย</h2>
+                    <div class="video-thumbnail" onclick="openModal('hTSMITT1rOg')">
+                        <img src="https://img2.imgbiz.com/imgbiz/002d2c8876013f6bee4.jpg" alt="การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นที่ช่วยเหลือตัวเองได้น้อย" class="rounded-lg">
+                        <div class="play-button">
+                            <i data-feather="play" class="h-8 w-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4">ท่าออกกำลังกายที่เหมาะสมและปลอดภัยสำหรับผู้ป่วยที่มีข้อจำกัดในการเคลื่อนไหวหรือช่วยเหลือตัวเองได้น้อย</p>
+                </div>
+                <div class="bg-green-50 px-6 py-3 flex justify-between items-center">
+                    <span class="text-green-700 font-medium">ระยะเวลา: 8:42 นาที</span>
+                    <button onclick="openModal('hTSMITT1rOg')" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full inline-flex items-center transition-all">
+                        <i data-feather="play" class="h-4 w-4 mr-2"></i>
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-medium text-green-800 mb-4">การออกกำลังกายเพื่อเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ</h2>
+                    <div class="video-thumbnail" onclick="openModal('m3g4JcBjzgw')">
+                        <img src="https://img2.imgbiz.com/imgbiz/003e5d77ea8008ff737.jpg" alt="การออกกำลังกายเพื่อเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ" class="rounded-lg">
+                        <div class="play-button">
+                            <i data-feather="play" class="h-8 w-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4">ท่าออกกำลังกายที่ช่วยเพิ่มความยืดหยุ่นและเสริมสร้างความแข็งแรงของกล้ามเนื้อส่วนต่างๆ ของร่างกาย</p>
+                </div>
+                <div class="bg-green-50 px-6 py-3 flex justify-between items-center">
+                    <span class="text-green-700 font-medium">ระยะเวลา: 12:30 นาที</span>
+                    <button onclick="openModal('m3g4JcBjzgw')" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full inline-flex items-center transition-all">
+                        <i data-feather="play" class="h-4 w-4 mr-2"></i>
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="video-card bg-white rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6">
+                    <h2 class="text-xl font-medium text-green-800 mb-4">การออกกำลังกายในท่านั่งและยืน</h2>
+                    <div class="video-thumbnail" onclick="openModal('8OfBNODKUB0')">
+                        <img src="https://img.youtube.com/vi/8OfBNODKUB0/maxresdefault.jpg" alt="การออกกำลังกายในท่านั่งและยืน" class="rounded-lg">
+                        <div class="play-button">
+                            <i data-feather="play" class="h-8 w-8"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-4">ท่าออกกำลังกายที่สามารถทำได้ในท่านั่งและยืน เหมาะสำหรับผู้ที่มีข้อจำกัดในการเคลื่อนไหวหรือผู้สูงอายุ</p>
+                </div>
+                <div class="bg-green-50 px-6 py-3 flex justify-between items-center">
+                    <span class="text-green-700 font-medium">ระยะเวลา: 9:18 นาที</span>
+                    <button onclick="openModal('8OfBNODKUB0')" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full inline-flex items-center transition-all">
+                        <i data-feather="play" class="h-4 w-4 mr-2"></i>
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="mt-12 bg-white rounded-xl shadow-sm p-6">
+            <div class="flex items-center mb-4">
+                <div class="bg-green-600 text-white p-2 rounded-full mr-3">
+                    <i data-feather="info" class="h-5 w-5"></i>
+                </div>
+                <h2 class="text-2xl font-medium text-green-800">คำแนะนำในการออกกำลังกาย</h2>
+            </div>
+            <div class="bg-green-50 rounded-lg p-6">
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-600 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>ควรปรึกษาแพทย์หรือนักกายภาพบำบัดก่อนเริ่มโปรแกรมการออกกำลังกายใดๆ</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-600 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>เริ่มต้นด้วยการออกกำลังกายเบาๆ และค่อยๆ เพิ่มความเข้มข้นตามความเหมาะสม</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-600 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>หากรู้สึกเจ็บปวดหรือไม่สบายระหว่างการออกกำลังกาย ให้หยุดทันทีและปรึกษาแพทย์</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-600 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>ดื่มน้ำให้เพียงพอก่อน ระหว่าง และหลังการออกกำลังกาย</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-feather="check-circle" class="text-green-600 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>ออกกำลังกายอย่างสม่ำเสมอเพื่อให้ได้ผลลัพธ์ที่ดีที่สุด</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 bg-white rounded-xl shadow-sm p-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://img2.imgbiz.com/imgbiz/you.png" alt="YouTube Logo" class="h-8 mr-3">
+                    <span class="text-green-800 font-medium">การออกกำลังกาย</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-green-600 hover:text-green-800">
+                        <i data-feather="help-circle"></i>
+                    </a>
+                    <a href="#" class="text-green-600 hover:text-green-800">
+                        <i data-feather="info"></i>
+                    </a>
+                    <a href="#" class="text-green-600 hover:text-green-800">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-4 text-center text-gray-500 text-sm">
+                © 2025 เวชศาสตร์ฟื้นฟูหัวใจและปอด. สงวนลิขสิทธิ์.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" class="text-2xl font-medium text-green-800 mb-4"></h2>
+            <div class="video-container">
+                <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+        
+        // Video titles mapping
+        const videoTitles = {
+            'Lzl49C5AEZ0': 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน',
+            'hTSMITT1rOg': 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นที่ช่วยเหลือตัวเองได้น้อย',
+            'm3g4JcBjzgw': 'การออกกำลังกายเพื่อเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ',
+            '8OfBNODKUB0': 'การออกกำลังกายในท่านั่งและยืน'
+        };
+        
+        // Modal functions
+        function openModal(videoId) {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            // Set the video source
+            videoFrame.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            
+            // Set the modal title
+            modalTitle.textContent = videoTitles[videoId];
+            
+            // Display the modal
+            modal.style.display = 'block';
+            
+            // Prevent body scrolling when modal is open
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const videoFrame = document.getElementById('videoFrame');
+            
+            // Stop the video
+            videoFrame.src = '';
+            
+            // Hide the modal
+            modal.style.display = 'none';
+            
+            // Re-enable body scrolling
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('videoModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'944a3f37a04710ca',t:'MTc0ODA2MzAxMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube การออกกำลังกาย - Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #f0f9f0;
+        }
+        
+        .video-card {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 100, 0, 0.15);
+            border-color: #4ade80;
+        }
+        
+        .video-modal {
+            transition: all 0.3s ease;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row items-center justify-between mb-10 gradient-bg rounded-xl p-6 text-white">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="https://img2.imgbiz.com/imgbiz/you.png" alt="YouTube Logo" class="h-16 mr-4">
+                <h1 class="text-3xl md:text-4xl font-bold">การออกกำลังกายเพื่อสุขภาพ</h1>
+            </div>
+            <p class="text-lg md:text-xl font-light max-w-md text-center md:text-right">
+                วิดีโอแนะนำการออกกำลังกายสำหรับผู้ป่วยและผู้ที่ต้องการดูแลสุขภาพ
+            </p>
+        </header>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Video Card 1 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/Lzl49C5AEZ0/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('Lzl49C5AEZ0', 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้น</h2>
+                    <p class="text-gray-600 mb-4">สำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน</p>
+                    <button onclick="openVideoModal('Lzl49C5AEZ0', 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นในโรงพยาบาล และที่บ้าน')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/hTSMITT1rOg/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('hTSMITT1rOg', 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นที่ช่วยเหลือตัวเองได้น้อย')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การออกกำลังกายสำหรับผู้ป่วยที่ช่วยเหลือตัวเองได้น้อย</h2>
+                    <p class="text-gray-600 mb-4">เหมาะสำหรับผู้ป่วยระยะพักฟื้นที่มีข้อจำกัดในการเคลื่อนไหว</p>
+                    <button onclick="openVideoModal('hTSMITT1rOg', 'การออกกำลังกายสำหรับผู้ป่วยระยะพักฟื้นที่ช่วยเหลือตัวเองได้น้อย')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/m3g4JcBjzgw/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('m3g4JcBjzgw', 'การออกกำลังกายเพื่อเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การออกกำลังกายเพื่อเพิ่มความยืดหยุ่น</h2>
+                    <p class="text-gray-600 mb-4">ช่วยเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ</p>
+                    <button onclick="openVideoModal('m3g4JcBjzgw', 'การออกกำลังกายเพื่อเพิ่มความยืดหยุ่นและความแข็งแรงของกล้ามเนื้อ')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="video-card bg-white rounded-xl overflow-hidden shadow-lg">
+                <div class="relative pb-[56.25%] bg-gray-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <img src="https://img.youtube.com/vi/8OfBNODKUB0/maxresdefault.jpg" alt="ภาพตัวอย่างวิดีโอ" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button onclick="openVideoModal('8OfBNODKUB0', 'การออกกำลังกายในท่านั่งและยืน')" class="bg-green-600 hover:bg-green-700 text-white rounded-full w-16 h-16 flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-xl font-semibold text-gray-800 mb-2">การออกกำลังกายในท่านั่งและยืน</h2>
+                    <p class="text-gray-600 mb-4">ท่าออกกำลังกายที่ทำได้ง่ายในชีวิตประจำวัน</p>
+                    <button onclick="openVideoModal('8OfBNODKUB0', 'การออกกำลังกายในท่านั่งและยืน')" class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                        รับชมวิดีโอ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-600">
+            <p>© 2023 การออกกำลังกายเพื่อสุขภาพ - รวบรวมวิดีโอที่เป็นประโยชน์สำหรับทุกคน</p>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl w-full max-w-4xl mx-4 overflow-hidden video-modal">
+            <div class="p-4 bg-green-600 text-white flex justify-between items-center">
+                <h3 id="videoTitle" class="text-xl font-medium truncate"></h3>
+                <button onclick="closeVideoModal()" class="text-white hover:text-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="relative pb-[56.25%] h-0">
+                <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="p-4 bg-gray-50">
+                <button onclick="closeVideoModal()" class="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300">
+                    ปิด
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openVideoModal(videoId, title) {
+            document.getElementById('videoTitle').textContent = title;
+            document.getElementById('videoFrame').src = `https://www.youtube.com/embed/${videoId}`;
+            document.getElementById('videoModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeVideoModal();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'944b12c5669b9102',t:'MTc0ODA3MTY3Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
